@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+import string, random, sys
+
+
+if len(sys.argv) > 1: length = int(sys.argv[1])
+else: length = 8
+
+keyspace = string.ascii_lowercase
+# keyspace += string.digits
+
+key = ''
+for i in range(length): key += random.choice(keyspace)
+
+print(key)
